@@ -1,10 +1,57 @@
+body {
+  font-size: 18px;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  table-layout: fixed;
+  color: #111;
+}
+
+header {
+  flex: 1;
+}
+
+main {
+  flex: 2;
+}
+
+#file {
+  display: flex;
+  margin: 2em auto;
+}
+
+.rythm-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .rythm-bass {
   width: 200px;
   margin: auto;
-  /* border-color: rgb(255, 0, 0); */
-  border: 2px solid white;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  margin: 3em auto;
 }
 
 h2 {
   text-align: center;
+}
+
+footer {
+  line-height: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  bottom: 0;
+  cursor: default;
+}
+
+footer p {
+  font-size: 0.8em;
+  margin: 1em auto;
 }
