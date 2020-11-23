@@ -12,23 +12,46 @@
 
 <body>
   <header>
-    <input type="file" id="file">
-    <!-- <audio id="music" controls></audio> -->
+    <label class="input">
+      <p>音楽ファイルを選択してスタート！</p>
+      <input type="file" id="file" accept="audio/*">
+    </label>
+    <audio id="music" controlslist="nodownload" controls></audio>
   </header>
-  <main>
+  <main class="neon">
+    <div class="corners-top">
+      <div class="circle neon rythm-bass"></div>
+      <h2 class="fontColor1 rythm-bass">Music Start!</h2>
+      <div class="circle neon rythm-bass"></div>
+    </div>
+    <div class="rythm-area-top">
+    </div>
     <div class="rythm-area">
-      <canvas id="sample" class="rythm-bass"></canvas>
-      <div class="rythm-bass">
-        <h2>Music Start!</h2>
-      </div>
-      <div class="rythm-bass square"></div>
-      <div class="rythm-bass square"></div>
-      <!-- <canvas id="visualizer" height="255"></canvas> -->
+      <div class="rythm-bass square color1 tilt"></div>
+      <div class="rythm-bass square color2 twist"></div>
+      <div class="rythm-bass square color2 twist2"></div>
+      <div class="rythm-bass square color1 tilt2"></div>
+    </div>
+    <div class="rythm-area-bottom">
+      <i class="fas fa-female fontColor2 rythm-bass pulse"></i>
+      <i class="fas fa-male fontColor1 rythm-bass jump"></i>
+      <i class="fas fa-cat fontColor2 rythm-bass tilt2"></i>
+      <i class="fas fa-female fontColor1 rythm-bass jump"></i>
+      <i class="fas fa-baby fontColor2 rythm-bass swing"></i>
+      <i class="fas fa-male fontColor1 rythm-bass jump"></i>
+      <i class="fas fa-dog fontColor2 rythm-bass tilt"></i>
+      <i class="fas fa-female fontColor1 rythm-bass jump"></i>
+      <i class="fas fa-male fontColor2 rythm-bass pulse"></i>
+    </div>
+    <div class="corners-bottom">
+      <div class="circle neon rythm-bass"></div>
+      <div class="circle neon rythm-bass"></div>
     </div>
   </main>
   <footer>
-    <p>&copy; 2020 Tanukizzan</p>
-    <p>rythm.js</p>
+    <a href="https://app.tanukizzan.com">他のアプリ</a>
+    <a href="http://okazari.github.io/Rythm.js/">Rythm.js</a>
+    <a href="https://github.com/tanukizzan/rhythm-music">GitHub</a>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.2.5/rythm.min.js"></script>

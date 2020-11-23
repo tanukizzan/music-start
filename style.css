@@ -1,47 +1,110 @@
-body {
+html {
   font-size: 18px;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
   table-layout: fixed;
-  color: #111;
+  color: #222;
 }
 
 header {
-  flex: 1;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-main {
-  flex: 2;
+audio {
+  width: 300px;
+}
+
+.input p {
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 #file {
-  display: flex;
-  margin: 2em auto;
+  outline: none;
+}
+
+#music {
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: auto;
 }
 
 .rythm-area {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  margin: 4rem auto;
 }
 
-.rythm-bass {
-  width: 200px;
-  margin: auto;
+.rythm-area-bottom {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.rythm-area-bottom .fas {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.corners-top, .corners-bottom {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.corners-bottom div:first-child {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.corners-bottom div:last-child {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+main, .square, .circle {
+  background-color: #fff;
+}
+
+.fontColor1, .fontColor2, .fontColor3 {
+  color: #fff;
 }
 
 .square {
   width: 100px;
   height: 100px;
-  background-color: aqua;
-  margin: 3em auto;
+  margin: 3rem auto;
 }
 
-h2 {
-  text-align: center;
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
 
+/* フッター */
 footer {
   line-height: none;
   display: flex;
@@ -51,7 +114,25 @@ footer {
   cursor: default;
 }
 
-footer p {
+footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #5F6368;
   font-size: 0.8em;
-  margin: 1em auto;
+  margin: 1rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 800px以下 */
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+  #file {
+    margin-bottom: 0.5em;
+  }
 }
